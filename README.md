@@ -1,5 +1,7 @@
 # Empirical assessment of guidelines to write energy-efficient Python code.
 
+Overleaf Project Link: https://www.overleaf.com/project/68bea01af5298d89cdee7e7a
+
 **Motivation:** You have a pre-compiled set of Python energy-efficiency guidelines, categorized into seven families (Code Optimization, Multithreading, Native Code, Function Calls, Object Orientation, Networking, and Other), which are available on GitHub. While there's a belief in their potential, their real-world impact on Python program energy consumption hasn't been thoroughly evaluated. This project aims to fill that gap by measuring these effects.
 
 **Goal:** The primary objective is to compare the energy usage benefits (or drawbacks) that result from applying different families of these guidelines to Python code.
