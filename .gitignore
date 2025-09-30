@@ -1,0 +1,126 @@
+# ===================================================================
+# Python Byte-compiled / Cache files
+# ===================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# C extensions
+*.so
+
+# ===================================================================
+# Virtual Environments
+# ===================================================================
+.venv/
+venv/
+env/
+.env/
+virtualenv/
+ENV/
+
+# ===================================================================
+# Distribution / Packaging
+# ===================================================================
+.eggs/
+*.egg-info/
+*.egg
+dist/
+build/
+wheels/
+*.whl
+MANIFEST
+
+# ===================================================================
+# Testing & Coverage Reports
+# ===================================================================
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+nosetests.xml
+pytest-report.html
+
+# ===================================================================
+# IDEs and Editors
+# ===================================================================
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/c_cpp_properties.json
+!.vscode/settings.json.default
+
+# PyCharm
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*~
+*.swo
+
+# =overs============================================================
+# Secrets & Environment Variables
+# ===================================================================
+# Never commit secrets, credentials, or API keys.
+# Use environment variables or a secrets management tool instead.
+.env
+.env.*
+secrets.py
+config.ini
+*.pem
+
+# ===================================================================
+# Jupyter Notebooks
+# ===================================================================
+.ipynb_checkpoints/
+profile_default/
+nbclassic_config.py
+
+# ===================================================================
+# Logs and Databases
+# ===================================================================
+*.log
+*.sqlite3
+*.db
+*.sql
+
+# ===================================================================
+# OS-generated files
+# ===================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ===================================================================
+# Other Tools
+# ===================================================================
+# Mypy cache
+.mypy_cache/
+
+# Ruff cache
+.ruff_cache/
+
+# Profile output
+profile_output/
+
+# ===================================================================
+# User-specific Data / Media files
+# ===================================================================
+# Add large data files, user-uploaded content, etc. here
+# For example:
+# data/
+# media/

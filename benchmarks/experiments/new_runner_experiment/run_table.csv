@@ -16,26 +16,26 @@ run_13_repetition_0,DONE,logic,baseline,large,101,0.5059,17.96,6808043520.0
 run_14_repetition_0,DONE,logic,opt,small,100,0.6126,17.95,6790456661.33
 run_15_repetition_0,DONE,logic,opt,large,100,0.537,18.89,6795649024.0
 run_16_repetition_0,DONE,approx,baseline,small,100,0.552,15.17,6801973248.0
-run_17_repetition_0,TODO,approx,baseline,large, , , , 
-run_18_repetition_0,TODO,approx,opt,small, , , , 
-run_19_repetition_0,TODO,approx,opt,large, , , , 
-run_20_repetition_0,TODO,temp_storage,baseline,small, , , , 
-run_21_repetition_0,TODO,temp_storage,baseline,large, , , , 
-run_22_repetition_0,TODO,temp_storage,opt,small, , , , 
-run_23_repetition_0,TODO,temp_storage,opt,large, , , , 
-run_24_repetition_0,TODO,fib,baseline,small, , , , 
-run_25_repetition_0,TODO,fib,baseline,large, , , , 
-run_26_repetition_0,TODO,fib,opt,small, , , , 
-run_27_repetition_0,TODO,fib,opt,large, , , , 
-run_28_repetition_0,TODO,inline,baseline,small, , , , 
-run_29_repetition_0,TODO,inline,baseline,large, , , , 
-run_30_repetition_0,TODO,inline,opt,small, , , , 
-run_31_repetition_0,TODO,inline,opt,large, , , , 
-run_0_repetition_1,TODO,sum_squares,baseline,small, , , , 
-run_1_repetition_1,TODO,sum_squares,baseline,large, , , , 
-run_2_repetition_1,TODO,sum_squares,opt,small, , , , 
-run_3_repetition_1,TODO,sum_squares,opt,large, , , , 
-run_4_repetition_1,TODO,string_concat,baseline,small, , , , 
+run_17_repetition_0,DONE,approx,baseline,large,100,3.1315,3.43,2434951850.67
+run_18_repetition_0,DONE,approx,opt,small,101,3.292,3.03,2450949461.33
+run_19_repetition_0,DONE,approx,opt,large,101,2.9672,3.02,2448612010.67
+run_20_repetition_0,DONE,temp_storage,baseline,small,101,2.8815,1.17,2448618837.33
+run_21_repetition_0,DONE,temp_storage,baseline,large,100,2.7409,1.89,2448534186.67
+run_22_repetition_0,DONE,temp_storage,opt,small,101,3.0018,3.9,2448525994.67
+run_23_repetition_0,DONE,temp_storage,opt,large,101,2.995,3.84,2449062570.67
+run_24_repetition_0,DONE,fib,baseline,small,101,3.044,3.5,2449042090.67
+run_25_repetition_0,DONE,fib,baseline,large,101,2.8465,3.88,2449148586.67
+run_26_repetition_0,DONE,fib,opt,small,100,3.2581,2.74,2392808106.67
+run_27_repetition_0,DONE,fib,opt,large,101,3.1485,3.1,3067305984.0
+run_28_repetition_0,DONE,inline,baseline,small,101,3.1673,3.86,3066773504.0
+run_29_repetition_0,DONE,inline,baseline,large,100,3.3625,3.45,3061874688.0
+run_30_repetition_0,DONE,inline,opt,small,100,3.12,1.93,3058182826.67
+run_31_repetition_0,DONE,inline,opt,large,100,2.9808,2.67,3057770496.0
+run_0_repetition_1,DONE,sum_squares,baseline,small,101,3.0329,3.72,3058106368.0
+run_1_repetition_1,DONE,sum_squares,baseline,large,101,3.4194,3.86,3058191018.67
+run_2_repetition_1,DONE,sum_squares,opt,small,101,3.1761,3.31,3058662058.67
+run_3_repetition_1,DONE,sum_squares,opt,large,101,3.3315,3.14,3058988373.33
+run_4_repetition_1,DONE,string_concat,baseline,small,101,3.1413,5.77,3059204096.0
 run_5_repetition_1,TODO,string_concat,baseline,large, , , , 
 run_6_repetition_1,TODO,string_concat,opt,small, , , , 
 run_7_repetition_1,TODO,string_concat,opt,large, , , , 
