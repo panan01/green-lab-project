@@ -22,7 +22,7 @@ class RunnerConfig:
 
     ROOT_DIR = Path(dirname(realpath(__file__)))
 
-    name: str = "D"
+    name: str = "A"
     results_output_path: Path = ROOT_DIR / 'experiments'
     operation_type: OperationType = OperationType.AUTO
     time_between_runs_in_ms: int = 2000
@@ -49,51 +49,86 @@ class RunnerConfig:
 
     def create_run_table_model(self) -> RunTableModel:
         """
-        Dynamically discovers benchmark scripts and creates the run table.
-        Scans recursively for *.py files matching the pattern:
-        <benchmark_name>_<version_id>.py
-        Where version_id must be one of [baseline, opt, g1, g2, ..., g9].
+        Dynamically discovers benchmark scripts and creates a precise run table
+        by telling the RunTableModel which combinations to exclude.
         """
-        # --- MODIFICATION START ---
-        # Define the set of allowed version suffixes.
+        # Import itertools at the top of your RunnerConfig.py file
+        import itertools
+        
         allowed_versions = {'baseline', 'opt'}.union({f'g{i}' for i in range(1, 10)})
-        # --- MODIFICATION END ---
+        sizes = ["small", "large"]
 
         found_benchmarks = set()
         found_versions = set()
+        valid_script_filenames = []
 
         output.console_log("Scanning for benchmark scripts with valid suffixes...")
         for script_path in self.ROOT_DIR.rglob('*.py'):
-            # Ignore the current config file and any __init__.py files
             if script_path.samefile(__file__) or script_path.name == '__init__.py':
                 continue
 
-            # Parse filename like "sort_baseline.py" into ("sort", "baseline")
             parts = script_path.stem.rsplit('_', 1)
             if len(parts) == 2:
                 benchmark_name, version_id = parts
-
-                # Check if the discovered version is in our allowed list.
                 if version_id in allowed_versions:
                     found_benchmarks.add(benchmark_name)
                     found_versions.add(version_id)
                     self.benchmark_scripts[(benchmark_name, version_id)] = script_path
-                    output.console_log(f"  Found valid benchmark: '{benchmark_name}', version: '{version_id}'")
-                else:
-                    output.console_log(f"  Ignoring file with invalid suffix: {script_path.name}")
+                    valid_script_filenames.append(script_path.name)
+        
+        # This part for writing to valid.txt remains the same.
+        output_file_path = self.ROOT_DIR / 'valid.txt'
+        try:
+            with open(output_file_path, 'w') as f:
+                for filename in sorted(valid_script_filenames):
+                    f.write(f"{filename}\n")
+            output.console_log(f"Wrote {len(valid_script_filenames)} valid script names to {output_file_path}")
+        except IOError as e:
+            output.console_log(f"Error writing to {output_file_path}: {e}", style="red")
 
         if not self.benchmark_scripts:
-            raise FileNotFoundError("No benchmark scripts found with valid suffixes! Ensure they end in _baseline, _opt, or _g1, ..., _g9.")
+            raise FileNotFoundError("No benchmark scripts found with valid suffixes!")
 
-        benchmark = FactorModel("benchmark", sorted(list(found_benchmarks)))
-        version = FactorModel("version", sorted(list(found_versions)))
-        size = FactorModel("size", ["small", "large"])
+        # --- NEW LOGIC START ---
 
+        # Step 1: Define the FactorModels for the complete theoretical grid
+        benchmark_factor = FactorModel("benchmark", sorted(list(found_benchmarks)))
+        version_factor = FactorModel("version", sorted(list(found_versions)))
+        size_factor = FactorModel("size", sizes)
+        
+        all_factors = [benchmark_factor, version_factor, size_factor]
+
+        # Step 2: Determine which combinations do NOT exist and should be excluded.
+        # Get all theoretically possible (benchmark, version) pairs
+        all_possible_pairs = set(itertools.product(found_benchmarks, found_versions))
+        
+        # Get the pairs that actually exist
+        valid_pairs = set(self.benchmark_scripts.keys())
+        
+        # The difference is the set of pairs we need to exclude
+        invalid_pairs = all_possible_pairs - valid_pairs
+        
+        # Step 3: Format the invalid pairs into the structure required by 'exclude_combinations'
+        exclusion_list = []
+        for b_name, v_id in invalid_pairs:
+            rule = {
+                benchmark_factor: [b_name],
+                version_factor: [v_id]
+            }
+            exclusion_list.append(rule)
+            
+        output.console_log(f"Found {len(invalid_pairs)} invalid (benchmark, version) combinations to exclude.")
+
+        # Step 4: Create the RunTableModel using the 'exclude_combinations' parameter
         self.run_table_model = RunTableModel(
-            factors=[benchmark, version, size],
+            factors=all_factors,
+            exclude_combinations=exclusion_list,
             data_columns=["exec_time_sec", "cpu_energy_j", "avg_cpu_usage", "avg_used_memory"],
             repetitions=10
         )
+        
+        # --- NEW LOGIC END ---
+        
         return self.run_table_model
 
     def before_experiment(self) -> None:
