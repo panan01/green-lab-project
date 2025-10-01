@@ -1,8 +1,6 @@
 
 # Green Lab Project -- Group 6
 
-This project uses a runner script to execute experiments defined in a configuration file.
-
 ## Prerequisites
 
 * Python 3.11.13 or higher
