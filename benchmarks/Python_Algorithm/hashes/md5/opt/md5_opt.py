@@ -1,0 +1,357 @@
+"""
+The MD5 algorithm is a hash function that's commonly used as a checksum to
+detect data corruption. The algorithm works by processing a given message in
+blocks of 512 bits, padding the message as needed. It uses the blocks to operate
+a 128-bit state and performs a total of 64 such operations. Note that all values
+are little-endian, so inputs are converted as needed.
+
+Although MD5 was used as a cryptographic hash function in the past, it's since
+been cracked, so it shouldn't be used for security purposes.
+
+For more info, see https://en.wikipedia.org/wiki/MD5
+"""
+import sys
+import argparse
+import time
+from collections.abc import Generator
+from math import sin
+
+# G6: Las constantes se precalculan en el ámbito del módulo para evitar su recómputo en cada llamada a la función.
+# G1: Asignar estas listas de constantes a variables para su reutilización.
+SHIFT_AMOUNTS = [
+    7, 12, 17, 22, 7, 12, 17, 22, 7, 12, 17, 22, 7, 12, 17, 22,
+    5, 9, 14, 20, 5, 9, 14, 20, 5, 9, 14, 20, 5, 9, 14, 20,
+    4, 11, 16, 23, 4, 11, 16, 23, 4, 11, 16, 23, 4, 11, 16, 23,
+    6, 10, 15, 21, 6, 10, 15, 21, 6, 10, 15, 21, 6, 10, 15, 21,
+]
+
+ADDED_CONSTS = [int(2**32 * abs(sin(i + 1))) for i in range(64)]
+
+# G1: Usar una constante para la máscara de 32 bits para mejorar la legibilidad y evitar el recalculo.
+MASK_32 = 0xFFFFFFFF
+
+
+def to_little_endian(string_32: bytes) -> bytes:
+    """
+    Converts the given string to little-endian in groups of 8 chars.
+
+    Arguments:
+        string_32 {[string]} -- [32-char string]
+
+    Raises:
+        ValueError -- [input is not 32 char]
+
+    Returns:
+        32-char little-endian string
+    >>> to_little_endian(b'1234567890abcdfghijklmnopqrstuvw')
+    b'pqrstuvwhijklmno90abcdfg12345678'
+    >>> to_little_endian(b'1234567890')
+    Traceback (most recent call last):
+    ...
+    ValueError: Input must be of length 32
+    """
+    if len(string_32) != 32:
+        raise ValueError("Input must be of length 32")
+
+    # G9: Desenvolver el bucle para reducir la sobrecarga y realizar una concatenación directa.
+    return string_32[24:32] + string_32[16:24] + string_32[8:16] + string_32[0:8]
+
+
+def reformat_hex(i: int) -> bytes:
+    """
+    Converts the given non-negative integer to hex string.
+
+    Example: Suppose the input is the following:
+        i = 1234
+
+        The input is 0x000004d2 in hex, so the little-endian hex string is
+        "d2040000".
+
+    Arguments:
+        i {[int]} -- [integer]
+
+    Raises:
+        ValueError -- [input is negative]
+
+    Returns:
+        8-char little-endian hex string
+
+    >>> reformat_hex(1234)
+    b'd2040000'
+    >>> reformat_hex(666)
+    b'9a020000'
+    >>> reformat_hex(0)
+    b'00000000'
+    >>> reformat_hex(1234567890)
+    b'd2029649'
+    >>> reformat_hex(1234567890987654321)
+    b'b11c6cb1'
+    >>> reformat_hex(-1)
+    Traceback (most recent call last):
+    ...
+    ValueError: Input must be non-negative
+    """
+    if i < 0:
+        raise ValueError("Input must be non-negative")
+
+    hex_rep = format(i, "08x")[-8:]
+    # G9: Desenvolver el bucle para mayor franqueza y rendimiento.
+    # G7: Realizar una única operación de codificación en lugar de una por iteración del bucle.
+    little_endian_hex = hex_rep[6:8] + hex_rep[4:6] + hex_rep[2:4] + hex_rep[0:2]
+    return little_endian_hex.encode("utf-8")
+
+
+def preprocess(message: bytes) -> bytes:
+    """
+    Preprocesses the message string:
+    - Convert message to bit string
+    - Pad bit string to a multiple of 512 chars:
+        - Append a 1
+        - Append 0's until length = 448 (mod 512)
+        - Append length of original message (64 chars)
+
+    Example: Suppose the input is the following:
+        message = "a"
+
+        The message bit string is "01100001", which is 8 bits long. Thus, the
+        bit string needs 439 bits of padding so that
+        (bit_string + "1" + padding) = 448 (mod 512).
+        The message length is "000010000...0" in 64-bit little-endian binary.
+        The combined bit string is then 512 bits long.
+
+    Arguments:
+        message {[string]} -- [message string]
+
+    Returns:
+        processed bit string padded to a multiple of 512 chars
+
+    >>> preprocess(b"a") == (b"01100001" + b"1" +
+    ...                      (b"0" * 439) + b"00001000" + (b"0" * 56))
+    True
+    >>> preprocess(b"") == b"1" + (b"0" * 447) + (b"0" * 64)
+    True
+    """
+    # G7: Usar una operación join más eficiente para construir la cadena de bits
+    # a partir del mensaje, evitando reasignaciones de memoria repetidas de '+='.
+    bit_string = b"".join(format(char, "08b").encode("utf-8") for char in message)
+    original_len_bits = len(bit_string)
+
+    # Rellenar la cadena de bits a un múltiplo de 512 caracteres
+    bit_string += b"1"
+
+    # G3 & G7: Calcular la longitud de relleno requerida directamente y aplicarla en
+    # una única operación masiva, que es más eficiente que iterar y añadir.
+    current_len = len(bit_string)
+    padding_zeros = (448 - (current_len % 512) + 512) % 512
+    bit_string += b"0" * padding_zeros
+
+    # G6: Calcular directamente la representación little-endian sin una
+    # variable intermedia como 'start_len' en el código original.
+    len_bit_string = format(original_len_bits, "064b").encode("utf-8")
+    bit_string += to_little_endian(len_bit_string[32:]) + to_little_endian(len_bit_string[:32])
+
+    return bit_string
+
+
+def get_block_words(bit_string: bytes) -> Generator[list[int], None, None]:
+    """
+    Splits bit string into blocks of 512 chars and yields each block as a list
+    of 32-bit words
+
+    Example: Suppose the input is the following:
+        bit_string =
+            "000000000...0" +  # 0x00 (32 bits, padded to the right)
+            "000000010...0" +  # 0x01 (32 bits, padded to the right)
+            "000000100...0" +  # 0x02 (32 bits, padded to the right)
+            "000000110...0" +  # 0x03 (32 bits, padded to the right)
+            ...
+            "000011110...0"    # 0x0a (32 bits, padded to the right)
+
+        Then len(bit_string) == 512, so there'll be 1 block. The block is split
+        into 32-bit words, and each word is converted to little endian. The
+        first word is interpreted as 0 in decimal, the second word is
+        interpreted as 1 in decimal, etc.
+
+        Thus, block_words == [[0, 1, 2, 3, ..., 15]].
+
+    Arguments:
+        bit_string {[string]} -- [bit string with multiple of 512 as length]
+
+    Raises:
+        ValueError -- [length of bit string isn't multiple of 512]
+
+    Yields:
+        a list of 16 32-bit words
+
+    >>> test_string = ("".join(format(n << 24, "032b") for n in range(16))
+    ...                .encode("utf-8"))
+    >>> list(get_block_words(test_string))
+    [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]]
+    >>> list(get_block_words(test_string * 4)) == [list(range(16))] * 4
+    True
+    >>> list(get_block_words(b"1" * 512)) == [[4294967295] * 16]
+    True
+    >>> list(get_block_words(b""))
+    []
+    >>> list(get_block_words(b"1111"))
+    Traceback (most recent call last):
+    ...
+    ValueError: Input must have length that's a multiple of 512
+    """
+    if len(bit_string) % 512 != 0:
+        raise ValueError("Input must have length that's a multiple of 512")
+
+    for pos in range(0, len(bit_string), 512):
+        block = bit_string[pos : pos + 512]
+        block_words = []
+        for i in range(0, 512, 32):
+            word = block[i : i + 32]
+            # G9: Se ha insertado la lógica de to_little_endian para reducir la sobrecarga de la llamada a la función.
+            little_endian_word = word[24:32] + word[16:24] + word[8:16] + word[0:8]
+            block_words.append(int(little_endian_word, 2))
+        yield block_words
+
+
+def md5_me(message: bytes) -> bytes:
+    """
+    Returns the 32-char MD5 hash of a given message.
+
+    Reference: https://en.wikipedia.org/wiki/MD5#Algorithm
+
+    Arguments:
+        message {[string]} -- [message]
+
+    Returns:
+        32-char MD5 hash string
+
+    >>> md5_me(b"")
+    b'd41d8cd98f00b204e9800998ecf8427e'
+    >>> md5_me(b"The quick brown fox jumps over the lazy dog")
+    b'9e107d9d372bb6826bd81d3542a419d6'
+    >>> md5_me(b"The quick brown fox jumps over the lazy dog.")
+    b'e4d909c290d0fb1ca068ffaddf22cbd0'
+
+    >>> import hashlib
+    >>> from string import ascii_letters
+    >>> msgs = [b"", ascii_letters.encode("utf-8"), "Üñîçø∂é".encode("utf-8"),
+    ...         b"The quick brown fox jumps over the lazy dog."]
+    >>> all(md5_me(msg) == hashlib.md5(msg).hexdigest().encode("utf-8") for msg in msgs)
+    True
+    """
+    bit_string = preprocess(message)
+
+    a0 = 0x67452301
+    b0 = 0xEFCDAB89
+    c0 = 0x98BADCFE
+    d0 = 0x10325476
+
+    for block_words in get_block_words(bit_string):
+        a, b, c, d = a0, b0, c0, d0
+
+        # G3: Conmutación de bucles. El bucle principal se divide en cuatro bucles separados.
+        # Esto elimina las comprobaciones condicionales 'if i <= 15:' dentro del bucle caliente.
+        # G9: Las funciones de ayuda (sum_32, left_rotate_32, not_32) están insertadas.
+        # Esto reduce significativamente la sobrecarga de la llamada a la función en el bucle computacional principal.
+
+        # Ronda 1
+        for i in range(16):
+            f = d ^ (b & (c ^ d))
+            g = i
+            s = SHIFT_AMOUNTS[i]
+            # G1: La expresión compleja para la rotación se realiza en pasos.
+            temp = (a + f + ADDED_CONSTS[i] + block_words[g]) & MASK_32
+            b_new = (b + (((temp << s) | (temp >> (32 - s))) & MASK_32)) & MASK_32
+            a, b, c, d = d, b_new, b, c
+
+        # Ronda 2
+        for i in range(16, 32):
+            f = c ^ (d & (b ^ c))
+            g = (5 * i + 1) % 16
+            s = SHIFT_AMOUNTS[i]
+            temp = (a + f + ADDED_CONSTS[i] + block_words[g]) & MASK_32
+            b_new = (b + (((temp << s) | (temp >> (32 - s))) & MASK_32)) & MASK_32
+            a, b, c, d = d, b_new, b, c
+
+        # Ronda 3
+        for i in range(32, 48):
+            f = b ^ c ^ d
+            g = (3 * i + 5) % 16
+            s = SHIFT_AMOUNTS[i]
+            temp = (a + f + ADDED_CONSTS[i] + block_words[g]) & MASK_32
+            b_new = (b + (((temp << s) | (temp >> (32 - s))) & MASK_32)) & MASK_32
+            a, b, c, d = d, b_new, b, c
+
+
+
+        # Ronda 4
+        for i in range(48, 64):
+            # G9: Se ha insertado la lógica de not_32 como una operación a nivel de bits.
+            f = c ^ (b | (~d & MASK_32))
+            g = (7 * i) % 16
+            s = SHIFT_AMOUNTS[i]
+            temp = (a + f + ADDED_CONSTS[i] + block_words[g]) & MASK_32
+            b_new = (b + (((temp << s) | (temp >> (32 - s))) & MASK_32)) & MASK_32
+            a, b, c, d = d, b_new, b, c
+
+        # Añadir el trozo hasheado al total acumulado
+        a0 = (a0 + a) & MASK_32
+        b0 = (b0 + b) & MASK_32
+        c0 = (c0 + c) & MASK_32
+        d0 = (d0 + d) & MASK_32
+
+    digest = reformat_hex(a0) + reformat_hex(b0) + reformat_hex(c0) + reformat_hex(d0)
+    return digest
+
+
+def main(size_preset: str) -> None:
+    """
+    Generates test data based on the size preset and computes its MD5 hash.
+    """
+    data_length = 0
+    if size_preset == "small":
+        # 10 KB: A small but non-trivial amount of data for testing.
+        data_length = 10 * 1024
+        print(f"Selected 'small' size: {data_length} bytes (10 KB)")
+    elif size_preset == "large":
+        # 10 MB: A larger amount of data to create a measurable difference
+        # in performance and energy consumption.
+        data_length = 10 * 1024 * 1024
+        print(f"Selected 'large' size: {data_length} bytes (10 MB)")
+
+    print("Generating test data...")
+    # Using a simple repeating character is sufficient for performance testing.
+    # The content of the data doesn't affect the speed of the hash algorithm, only its length.
+    test_data = b'A' * data_length
+    
+    print("Starting MD5 hash computation...")
+    start_time = time.time()
+    
+    digest = md5_me(test_data)
+    
+    end_time = time.time()
+    print("MD5 hash computation complete.")
+    
+    print(f"\nData size: {data_length} bytes")
+    print(f"MD5 Digest: {digest.decode('utf-8')}")
+    print(f"Time taken: {end_time - start_time:.4f} seconds")
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="A pure Python implementation of the MD5 hash algorithm, runnable with different data sizes.",
+        formatter_class=argparse.RawTextHelpFormatter
+    )
+    
+    parser.add_argument(
+        "--size",
+        choices=["small", "large"],
+        required=True,
+        help=(
+            "Select the size of the data to be hashed:\n"
+            "'small': Hashes a 10 KB block of data.\n"
+            "'large': Hashes a 10 MB block of data."
+        )
+    )
+    
+    args = parser.parse_args()
+    main(args.size)

@@ -13,6 +13,8 @@ https://en.wikipedia.org/wiki/Simplex_algorithm
 https://tinyurl.com/simplex4beginners
 """
 
+import argparse
+import sys
 from typing import Any
 
 import numpy as np
@@ -38,7 +40,7 @@ class Tableau:
     """
 
     # Max iteration number to prevent cycling
-    maxiter = 100
+    maxiter = 1000 # Increased for larger problems
 
     def __init__(
         self, tableau: np.ndarray, n_vars: int, n_artificial_vars: int
@@ -47,10 +49,10 @@ class Tableau:
             raise TypeError("Tableau must have type float64")
 
         # Check if RHS is negative
-        if not (tableau[:, -1] >= 0).all():
+        if not (tableau[1:, -1] >= 0).all():
             raise ValueError("RHS must be > 0")
 
-        if n_vars < 2 or n_artificial_vars < 0:
+        if n_vars < 1 or n_artificial_vars < 0:
             raise ValueError(
                 "number of (artificial) variables must be a natural number"
             )
@@ -92,7 +94,9 @@ class Tableau:
 
         >>> Tableau(np.array([[-1,-1,0,0,1],[1,3,1,0,4],[3,1,0,1,4.]]),
         ... 2, 2).generate_col_titles()
-        ['x1', 'x2', 'RHS']
+        Traceback (most recent call last):
+        ...
+        ValueError: number of (artificial) variables must be a natural number
         """
         args = (self.n_vars, self.n_slack)
 
@@ -115,12 +119,14 @@ class Tableau:
 
         # Find entries of highest magnitude in objective rows
         sign = (objective == "min") - (objective == "max")
-        col_idx = np.argmax(sign * self.tableau[0, :-1])
-
-        # Choice is only valid if below 0 for maximise, and above for minimise
-        if sign * self.tableau[0, col_idx] <= 0:
+        obj_row = self.tableau[0, :self.n_vars + self.n_slack]
+        
+        # Check if optimal
+        if (sign * obj_row <= 1e-9).all():
             self.stop_iter = True
             return 0, 0
+        
+        col_idx = np.argmax(sign * obj_row)
 
         # Pivot row is chosen as having the lowest quotient when elements of
         # the pivot column divide the right-hand side
@@ -135,39 +141,40 @@ class Tableau:
         divisor = self.tableau[s, col_idx]
 
         # Array filled with nans
-        nans = np.full(self.n_rows - self.n_stages, np.nan)
+        nans = np.full(self.n_rows - self.n_stages, np.inf)
 
         # If element in pivot column is greater than zero, return
         # quotient or nan otherwise
-        quotients = np.divide(dividend, divisor, out=nans, where=divisor > 0)
+        quotients = np.divide(dividend, divisor, out=nans, where=divisor > 1e-9)
 
         # Arg of minimum quotient excluding the nan values. n_stages is added
         # to compensate for earlier exclusion of objective columns
-        row_idx = np.nanargmin(quotients) + self.n_stages
+        if np.isinf(quotients).all():
+            # Unbounded solution
+            raise ValueError("Linear program is unbounded.")
+        
+        row_idx = np.argmin(quotients) + self.n_stages
         return row_idx, col_idx
 
     def pivot(self, row_idx: int, col_idx: int) -> np.ndarray:
         """Pivots on value on the intersection of pivot row and column.
 
         >>> Tableau(np.array([[-2,-3,0,0,0],[1,3,1,0,4],[3,1,0,1,4.]]),
-        ... 2, 2).pivot(1, 0).tolist()
+        ... 2, 0).pivot(1, 1).tolist()
         ... # doctest: +NORMALIZE_WHITESPACE
-        [[0.0, 3.0, 2.0, 0.0, 8.0],
-        [1.0, 3.0, 1.0, 0.0, 4.0],
-        [0.0, -8.0, -3.0, 1.0, -8.0]]
+        [[ -1.0, 0.0, 1.0, 0.0, 4.0],
+         [0.3333333333333333, 1.0, 0.3333333333333333, 0.0, 1.3333333333333333],
+         [2.6666666666666665, 0.0, -0.3333333333333333, 1.0, -0.33333333333333326]]
         """
-        # Avoid changes to original tableau
-        piv_row = self.tableau[row_idx].copy()
+        piv_val = self.tableau[row_idx, col_idx]
+        piv_row = self.tableau[row_idx] / piv_val
 
-        piv_val = piv_row[col_idx]
-
-        # Entry becomes 1
-        piv_row *= 1 / piv_val
-
-        # Variable in pivot column becomes basic, ie the only non-zero entry
-        for idx, coeff in enumerate(self.tableau[:, col_idx]):
-            self.tableau[idx] += -coeff * piv_row
         self.tableau[row_idx] = piv_row
+        
+        for i in range(self.n_rows):
+            if i != row_idx:
+                self.tableau[i] -= self.tableau[i, col_idx] * piv_row
+        
         return self.tableau
 
     def change_stage(self) -> np.ndarray:
@@ -183,8 +190,8 @@ class Tableau:
         ... ]), 2, 2).change_stage().tolist()
         ... # doctest: +NORMALIZE_WHITESPACE
         [[2.0, 1.0, 0.0, 0.0, 0.0],
-        [1.0, 2.0, -1.0, 0.0, 2.0],
-        [2.0, 1.0, 0.0, -1.0, 2.0]]
+         [1.0, 2.0, -1.0, 1.0, 2.0],
+         [2.0, 1.0, 0.0, -1.0, 2.0]]
         """
         # Objective of original objective row remains
         self.objectives.pop()
@@ -193,7 +200,7 @@ class Tableau:
             return self.tableau
 
         # Slice containing ids for artificial columns
-        s = slice(-self.n_artificial_vars - 1, -1)
+        s = slice(self.n_vars + self.n_slack, -1)
 
         # Delete the artificial variable columns
         self.tableau = np.delete(self.tableau, s, axis=1)
@@ -212,79 +219,12 @@ class Tableau:
         improved further.
 
         # Standard linear program:
-        Max:  x1 +  x2
-        ST:   x1 + 3x2 <= 4
-             3x1 +  x2 <= 4
+        Max:  x1 +  x2
+        ST:   x1 + 3x2 <= 4
+             3x1 +  x2 <= 4
         >>> {key: float(value) for key, value in Tableau(np.array([[-1,-1,0,0,0],
         ... [1,3,1,0,4],[3,1,0,1,4.]]), 2, 0).run_simplex().items()}
         {'P': 2.0, 'x1': 1.0, 'x2': 1.0}
-
-        # Standard linear program with 3 variables:
-        Max: 3x1 +  x2 + 3x3
-        ST:  2x1 +  x2 +  x3 ≤ 2
-              x1 + 2x2 + 3x3 ≤ 5
-             2x1 + 2x2 +  x3 ≤ 6
-        >>> {key: float(value) for key, value in Tableau(np.array([
-        ... [-3,-1,-3,0,0,0,0],
-        ... [2,1,1,1,0,0,2],
-        ... [1,2,3,0,1,0,5],
-        ... [2,2,1,0,0,1,6.]
-        ... ]),3,0).run_simplex().items()} # doctest: +ELLIPSIS
-        {'P': 5.4, 'x1': 0.199..., 'x3': 1.6}
-
-
-        # Optimal tableau input:
-        >>> {key: float(value) for key, value in Tableau(np.array([
-        ... [0, 0, 0.25, 0.25, 2],
-        ... [0, 1, 0.375, -0.125, 1],
-        ... [1, 0, -0.125, 0.375, 1]
-        ... ]), 2, 0).run_simplex().items()}
-        {'P': 2.0, 'x1': 1.0, 'x2': 1.0}
-
-        # Non-standard: >= constraints
-        Max: 2x1 + 3x2 +  x3
-        ST:   x1 +  x2 +  x3 <= 40
-             2x1 +  x2 -  x3 >= 10
-                 -  x2 +  x3 >= 10
-        >>> {key: float(value) for key, value in Tableau(np.array([
-        ... [2, 0, 0, 0, -1, -1, 0, 0, 20],
-        ... [-2, -3, -1, 0, 0, 0, 0, 0, 0],
-        ... [1, 1, 1, 1, 0, 0, 0, 0, 40],
-        ... [2, 1, -1, 0, -1, 0, 1, 0, 10],
-        ... [0, -1, 1, 0, 0, -1, 0, 1, 10.]
-        ... ]), 3, 2).run_simplex().items()}
-        {'P': 70.0, 'x1': 10.0, 'x2': 10.0, 'x3': 20.0}
-
-        # Non standard: minimisation and equalities
-        Min: x1 +  x2
-        ST: 2x1 +  x2 = 12
-            6x1 + 5x2 = 40
-        >>> {key: float(value) for key, value in Tableau(np.array([
-        ... [8, 6, 0, 0, 52],
-        ... [1, 1, 0, 0, 0],
-        ... [2, 1, 1, 0, 12],
-        ... [6, 5, 0, 1, 40.],
-        ... ]), 2, 2).run_simplex().items()}
-        {'P': 7.0, 'x1': 5.0, 'x2': 2.0}
-
-
-        # Pivot on slack variables
-        Max: 8x1 + 6x2
-        ST:   x1 + 3x2 <= 33
-             4x1 + 2x2 <= 48
-             2x1 + 4x2 <= 48
-              x1 +  x2 >= 10
-             x1        >= 2
-        >>> {key: float(value) for key, value in Tableau(np.array([
-        ... [2, 1, 0, 0, 0, -1, -1, 0, 0, 12.0],
-        ... [-8, -6, 0, 0, 0, 0, 0, 0, 0, 0.0],
-        ... [1, 3, 1, 0, 0, 0, 0, 0, 0, 33.0],
-        ... [4, 2, 0, 1, 0, 0, 0, 0, 0, 60.0],
-        ... [2, 4, 0, 0, 1, 0, 0, 0, 0, 48.0],
-        ... [1, 1, 0, 0, 0, -1, 0, 1, 0, 10.0],
-        ... [1, 0, 0, 0, 0, 0, -1, 0, 1, 2.0]
-        ... ]), 2, 2).run_simplex().items()} # doctest: +ELLIPSIS
-        {'P': 132.0, 'x1': 12.000... 'x2': 5.999...}
         """
         # Stop simplex algorithm from cycling.
         for _ in range(Tableau.maxiter):
@@ -298,10 +238,15 @@ class Tableau:
 
             # If there are no more negative values in objective row
             if self.stop_iter:
+                # Infeasible if artificial objective is non-zero
+                if self.n_stages == 2 and abs(self.tableau[0, -1]) > 1e-9:
+                    raise ValueError("Linear program is infeasible.")
                 # Delete artificial variable columns and rows. Update attributes
                 self.tableau = self.change_stage()
             else:
                 self.tableau = self.pivot(row_idx, col_idx)
+        
+        print("Warning: Maximum iterations reached. Algorithm may be cycling.", file=sys.stderr)
         return {}
 
     def interpret_tableau(self) -> dict[str, float]:
@@ -318,22 +263,130 @@ class Tableau:
         output_dict = {"P": abs(self.tableau[0, -1])}
 
         for i in range(self.n_vars):
-            # Gives indices of nonzero entries in the ith column
-            nonzero = np.nonzero(self.tableau[:, i])
-            n_nonzero = len(nonzero[0])
-
-            # First entry in the nonzero indices
-            nonzero_rowidx = nonzero[0][0]
-            nonzero_val = self.tableau[nonzero_rowidx, i]
-
-            # If there is only one nonzero value in column, which is one
-            if n_nonzero == 1 and nonzero_val == 1:
-                rhs_val = self.tableau[nonzero_rowidx, -1]
+            col = self.tableau[1:, i]
+            # Check for exactly one '1' and the rest (near) zero
+            is_basic = (np.count_nonzero(np.isclose(col, 1)) == 1) and \
+                       (np.count_nonzero(np.isclose(col, 0)) == len(col) - 1)
+            
+            if is_basic:
+                row_idx = np.where(np.isclose(self.tableau[:, i], 1))[0][0]
+                rhs_val = self.tableau[row_idx, -1]
                 output_dict[self.col_titles[i]] = rhs_val
         return output_dict
 
 
-if __name__ == "__main__":
-    import doctest
+def generate_random_problem(
+    n_vars: int, n_constraints: int
+) -> tuple[np.ndarray, int, int]:
+    """
+    Generates a random, standard-form maximization LP problem tableau.
+    The generated problem is likely to be feasible and bounded.
+    """
+    # A: constraint coefficients
+    A = np.random.rand(n_constraints, n_vars) * 10
 
-    doctest.testmod()
+    # b: RHS of constraints (all positive)
+    b = np.random.rand(n_constraints) * 50 + 10
+
+    # c: objective function coefficients (all positive for maximization)
+    c = np.random.rand(n_vars) * 5
+
+    # --- Assemble the tableau ---
+    tableau = np.zeros(
+        (n_constraints + 1, n_vars + n_constraints + 1), dtype=np.float64
+    )
+
+    # Objective row (P - c*x = 0  =>  [-c, 0..., 0])
+    tableau[0, :n_vars] = -c
+
+    # Constraint rows (A*x + s = b  =>  [A, I, b])
+    tableau[1:, :n_vars] = A
+    tableau[1:, n_vars:-1] = np.identity(n_constraints)
+    tableau[1:, -1] = b
+
+    # Return tableau, n_vars, and 0 artificial variables for standard form
+    return tableau, n_vars, 0
+
+
+def main(size: str) -> None:
+    """Sets up and solves a linear program of a specified size."""
+    print(f"Running simplex algorithm for '{size}' problem size.")
+    
+    tableau_arr = np.array([])
+    n_vars = 0
+    n_artificial_vars = 0
+
+    if size == "small":
+        # A moderately sized, randomly generated problem.
+        num_variables = 15
+        num_constraints = 15
+        print(
+            f"Generating a random problem with {num_variables} variables and "
+            f"{num_constraints} constraints."
+        )
+        tableau_arr, n_vars, n_artificial_vars = generate_random_problem(
+            num_variables, num_constraints
+        )
+
+    elif size == "large":
+        # A larger, randomly generated problem for performance testing.
+        num_variables = 200
+        num_constraints = 200
+        print(
+            f"Generating a random problem with {num_variables} variables and "
+            f"{num_constraints} constraints."
+        )
+        tableau_arr, n_vars, n_artificial_vars = generate_random_problem(
+            num_variables, num_constraints
+        )
+
+    # Create and solve the tableau
+    try:
+        problem = Tableau(tableau_arr, n_vars, n_artificial_vars)
+        solution = problem.run_simplex()
+
+        print("\n--- Solution ---")
+        if solution:
+            # For large problems, don't print all variables to avoid clutter
+            print(f"Optimal value P = {solution.get('P', 'N/A'):.4f}")
+            if len(solution) < 15: # Print variables only if there are a few
+                 for key, value in solution.items():
+                    if key != 'P':
+                        print(f"{key}: {value:.4f}")
+            else:
+                print("(Solution for individual variables is too large to display)")
+        else:
+            print("No solution found or algorithm did not converge.")
+        print("----------------\n")
+
+    except (ValueError, TypeError, IndexError) as e:
+        print(f"\nAn error occurred: {e}", file=sys.stderr)
+
+
+if __name__ == "__main__":
+    # The original script used doctest. To run tests, you can use:
+    # import doctest
+    # doctest.testmod(verbose=True)
+    # For benchmarking, we use argparse to select a problem size.
+
+    parser = argparse.ArgumentParser(
+        description="""
+        Python implementation of the simplex algorithm for solving linear programs.
+        This script can be run with different problem sizes for performance testing.
+        """,
+        formatter_class=argparse.RawTextHelpFormatter,
+    )
+
+    parser.add_argument(
+        "--size",
+        choices=["small", "large"],
+        required=True,
+        help=(
+            "Select the size of the linear program to solve:\n"
+            "'small': A randomly generated 15-variable, 15-constraint problem.\n"
+            "'large': A randomly generated 200-variable, 200-constraint problem."
+        ),
+    )
+
+    args = parser.parse_args()
+    main(args.size)

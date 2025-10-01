@@ -22,7 +22,7 @@ class RunnerConfig:
 
     ROOT_DIR = Path(dirname(realpath(__file__)))
 
-    name: str = "tp"
+    name: str = "D"
     results_output_path: Path = ROOT_DIR / 'experiments'
     operation_type: OperationType = OperationType.AUTO
     time_between_runs_in_ms: int = 2000
