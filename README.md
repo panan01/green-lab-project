@@ -1,7 +1,5 @@
 
-
-# green-lab-project -- Group 6
-# Green Lab Project
+# Green Lab Project -- Group 6
 
 This project uses a runner script to execute experiments defined in a configuration file.
 
