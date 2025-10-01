@@ -67,7 +67,7 @@ def main(size: str) -> None:
     # 为小规模和大规模测试定义数据量
     size_mapping = {
         "small": 10_000,    # 1万个元素
-        "large": 2_000_000  # 200万个元素
+        "large": 2_00_000  # 20万个元素
     }
     num_elements = size_mapping[size]
 

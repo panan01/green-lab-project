@@ -1,0 +1,2103 @@
+3
+[EXPERIMENT_RUNNER]:  Custom config loaded
+=======================  ==========================================================
+Key                      Value
+=======================  ==========================================================
+ROOT_DIR                 /home/homuracat/green-lab-project/benchmarks
+benchmark_scripts        {}
+experiment_path          /home/homuracat/green-lab-project/benchmarks/experiments/B
+name                     B
+operation_type           OperationType.AUTO
+results_output_path      /home/homuracat/green-lab-project/benchmarks/experiments
+run_table_model
+self_measure             False
+time_between_runs_in_ms  2000
+=======================  ==========================================================
+[EXPERIMENT_RUNNER]:  Scanning for benchmark scripts with valid suffixes...
+[EXPERIMENT_RUNNER]:  Wrote 65 valid script names to /home/homuracat/green-lab-project/benchmarks/valid.txt
+[EXPERIMENT_RUNNER]:  Found 95 invalid (benchmark, version) combinations to exclude.
+[EXPERIMENT_RUNNER]:  [93mExperiment run table created...[0m
+[EXPERIMENT_RUNNER]:  [92mExperiment setup completed...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_experiment config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [1 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_0_repetition_0', '__done': 'TODO', 'benchmark': 'approx', 'version': 'baseline', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_0_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/approx/approx_baseline.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.2636), 'avg_cpu_usage': np.float64(5.03), 'avg_used_memory': np.float64(3874020010.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_0_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [2 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_1_repetition_0', '__done': 'TODO', 'benchmark': 'approx', 'version': 'baseline', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_1_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/approx/approx_baseline.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(4.2308), 'avg_cpu_usage': np.float64(8.95), 'avg_used_memory': np.float64(3870822400.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_1_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [3 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_2_repetition_0', '__done': 'TODO', 'benchmark': 'approx', 'version': 'opt', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_2_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/approx/approx_opt.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.2432), 'avg_cpu_usage': np.float64(3.88), 'avg_used_memory': np.float64(3883692032.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_2_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [4 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_3_repetition_0', '__done': 'TODO', 'benchmark': 'approx', 'version': 'opt', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_3_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/approx/approx_opt.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.3546), 'avg_cpu_usage': np.float64(4.96), 'avg_used_memory': np.float64(3880770218.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_3_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [5 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_4_repetition_0', '__done': 'TODO', 'benchmark': 'audio_filters', 'version': 'baseline', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_4_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/audio_filters/audio_filters_baseline.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(400), 'cpu_energy_j': np.float64(28.6235), 'avg_cpu_usage': np.float64(14.08), 'avg_used_memory': np.float64(3903356928.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_4_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [6 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_5_repetition_0', '__done': 'TODO', 'benchmark': 'audio_filters', 'version': 'baseline', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_5_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/audio_filters/audio_filters_baseline.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(401), 'cpu_energy_j': np.float64(31.3052), 'avg_cpu_usage': np.float64(15.98), 'avg_used_memory': np.float64(3908096000.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_5_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [7 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_6_repetition_0', '__done': 'TODO', 'benchmark': 'audio_filters', 'version': 'g1', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_6_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/audio_filters/g1/audio_filters_g1.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(401), 'cpu_energy_j': np.float64(27.3429), 'avg_cpu_usage': np.float64(12.42), 'avg_used_memory': np.float64(3907269290.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_6_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [8 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_7_repetition_0', '__done': 'TODO', 'benchmark': 'audio_filters', 'version': 'g1', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_7_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/audio_filters/g1/audio_filters_g1.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(401), 'cpu_energy_j': np.float64(31.0364), 'avg_cpu_usage': np.float64(12.46), 'avg_used_memory': np.float64(3909107029.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_7_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [9 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_8_repetition_0', '__done': 'TODO', 'benchmark': 'audio_filters', 'version': 'g3', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_8_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/audio_filters/g3/audio_filters_g3.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(401), 'cpu_energy_j': np.float64(27.6165), 'avg_cpu_usage': np.float64(12.9), 'avg_used_memory': np.float64(3908644181.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_8_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [10 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_9_repetition_0', '__done': 'TODO', 'benchmark': 'audio_filters', 'version': 'g3', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_9_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/audio_filters/g3/audio_filters_g3.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(501), 'cpu_energy_j': np.float64(34.283), 'avg_cpu_usage': np.float64(13.92), 'avg_used_memory': np.float64(3915780681.14)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_9_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [11 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_10_repetition_0', '__done': 'TODO', 'benchmark': 'audio_filters', 'version': 'g6', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_10_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/audio_filters/g6/audio_filters_g6.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(401), 'cpu_energy_j': np.float64(27.9659), 'avg_cpu_usage': np.float64(12.36), 'avg_used_memory': np.float64(3911213738.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_10_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [12 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_11_repetition_0', '__done': 'TODO', 'benchmark': 'audio_filters', 'version': 'g6', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_11_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/audio_filters/g6/audio_filters_g6.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(401), 'cpu_energy_j': np.float64(30.9925), 'avg_cpu_usage': np.float64(15.1), 'avg_used_memory': np.float64(3910706517.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_11_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [13 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_12_repetition_0', '__done': 'TODO', 'benchmark': 'audio_filters', 'version': 'g7', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_12_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/audio_filters/g7/audio_filters_g7.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(501), 'cpu_energy_j': np.float64(39.6057), 'avg_cpu_usage': np.float64(27.52), 'avg_used_memory': np.float64(3944409380.57)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_12_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [14 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_13_repetition_0', '__done': 'TODO', 'benchmark': 'audio_filters', 'version': 'g7', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_13_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/audio_filters/g7/audio_filters_g7.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(400), 'cpu_energy_j': np.float64(35.3297), 'avg_cpu_usage': np.float64(23.0), 'avg_used_memory': np.float64(3969247914.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_13_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [15 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_14_repetition_0', '__done': 'TODO', 'benchmark': 'audio_filters', 'version': 'g8', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_14_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/audio_filters/g8/audio_filters_g8.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(301), 'cpu_energy_j': np.float64(25.0115), 'avg_cpu_usage': np.float64(15.09), 'avg_used_memory': np.float64(3960692736.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_14_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [16 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_15_repetition_0', '__done': 'TODO', 'benchmark': 'audio_filters', 'version': 'g8', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_15_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/audio_filters/g8/audio_filters_g8.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(401), 'cpu_energy_j': np.float64(30.6038), 'avg_cpu_usage': np.float64(14.49), 'avg_used_memory': np.float64(3965759488.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_15_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [17 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_16_repetition_0', '__done': 'TODO', 'benchmark': 'audio_filters', 'version': 'g9', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_16_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/audio_filters/g9/audio_filters_g9.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(401), 'cpu_energy_j': np.float64(35.5574), 'avg_cpu_usage': np.float64(22.2), 'avg_used_memory': np.float64(3967125504.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_16_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [18 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_17_repetition_0', '__done': 'TODO', 'benchmark': 'audio_filters', 'version': 'g9', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_17_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/audio_filters/g9/audio_filters_g9.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(401), 'cpu_energy_j': np.float64(34.6774), 'avg_cpu_usage': np.float64(25.35), 'avg_used_memory': np.float64(3966779392.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_17_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [19 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_18_repetition_0', '__done': 'TODO', 'benchmark': 'audio_filters', 'version': 'opt', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_18_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/audio_filters/opt/audio_filters_opt.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(501), 'cpu_energy_j': np.float64(35.4306), 'avg_cpu_usage': np.float64(19.58), 'avg_used_memory': np.float64(3911780644.57)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_18_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [20 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_19_repetition_0', '__done': 'TODO', 'benchmark': 'audio_filters', 'version': 'opt', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_19_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/audio_filters/opt/audio_filters_opt.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(401), 'cpu_energy_j': np.float64(35.1756), 'avg_cpu_usage': np.float64(22.66), 'avg_used_memory': np.float64(3908667392.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_19_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [21 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_20_repetition_0', '__done': 'TODO', 'benchmark': 'basic_string', 'version': 'baseline', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_20_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/genetic_algorithm/basic_string_baseline.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(4.8654), 'avg_cpu_usage': np.float64(2.69), 'avg_used_memory': np.float64(3887748437.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_20_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [22 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_21_repetition_0', '__done': 'TODO', 'benchmark': 'basic_string', 'version': 'baseline', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_21_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/genetic_algorithm/basic_string_baseline.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(601), 'cpu_energy_j': np.float64(35.8181), 'avg_cpu_usage': np.float64(2.03), 'avg_used_memory': np.float64(3888014336.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_21_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [23 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_22_repetition_0', '__done': 'TODO', 'benchmark': 'basic_string', 'version': 'g1', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_22_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/genetic_algorithm/g1/basic_string_g1.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.411), 'avg_cpu_usage': np.float64(2.31), 'avg_used_memory': np.float64(3886455466.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_22_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [24 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_23_repetition_0', '__done': 'TODO', 'benchmark': 'basic_string', 'version': 'g1', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_23_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/genetic_algorithm/g1/basic_string_g1.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(800), 'cpu_energy_j': np.float64(48.1722), 'avg_cpu_usage': np.float64(6.67), 'avg_used_memory': np.float64(3889092608.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_23_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [25 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_24_repetition_0', '__done': 'TODO', 'benchmark': 'basic_string', 'version': 'g2', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_24_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/genetic_algorithm/g2/basic_string_g2.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(4.2979), 'avg_cpu_usage': np.float64(3.81), 'avg_used_memory': np.float64(3875452245.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_24_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [26 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_25_repetition_0', '__done': 'TODO', 'benchmark': 'basic_string', 'version': 'g2', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_25_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/genetic_algorithm/g2/basic_string_g2.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(501), 'cpu_energy_j': np.float64(28.9471), 'avg_cpu_usage': np.float64(2.16), 'avg_used_memory': np.float64(3882562706.29)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_25_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [27 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_26_repetition_0', '__done': 'TODO', 'benchmark': 'basic_string', 'version': 'g7', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_26_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/genetic_algorithm/g7/basic_string_g7.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.3996), 'avg_cpu_usage': np.float64(4.57), 'avg_used_memory': np.float64(3879183701.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_26_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [28 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_27_repetition_0', '__done': 'TODO', 'benchmark': 'basic_string', 'version': 'g7', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_27_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/genetic_algorithm/g7/basic_string_g7.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(501), 'cpu_energy_j': np.float64(27.8575), 'avg_cpu_usage': np.float64(2.0), 'avg_used_memory': np.float64(3883182372.57)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_27_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [29 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_28_repetition_0', '__done': 'TODO', 'benchmark': 'basic_string', 'version': 'g8', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_28_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/genetic_algorithm/g8/basic_string_g8.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.1451), 'avg_cpu_usage': np.float64(3.45), 'avg_used_memory': np.float64(3878487381.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_28_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [30 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_29_repetition_0', '__done': 'TODO', 'benchmark': 'basic_string', 'version': 'g8', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_29_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/genetic_algorithm/g8/basic_string_g8.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(201), 'cpu_energy_j': np.float64(11.6853), 'avg_cpu_usage': np.float64(3.42), 'avg_used_memory': np.float64(3878244352.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_29_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [31 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_30_repetition_0', '__done': 'TODO', 'benchmark': 'basic_string', 'version': 'opt', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_30_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/genetic_algorithm/opt/basic_string_opt.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.5126), 'avg_cpu_usage': np.float64(3.08), 'avg_used_memory': np.float64(3874981205.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_30_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [32 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_31_repetition_0', '__done': 'TODO', 'benchmark': 'basic_string', 'version': 'opt', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_31_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/genetic_algorithm/opt/basic_string_opt.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(200), 'cpu_energy_j': np.float64(10.8643), 'avg_cpu_usage': np.float64(3.77), 'avg_used_memory': np.float64(3877266432.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_31_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [33 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_32_repetition_0', '__done': 'TODO', 'benchmark': 'diophantine_equation', 'version': 'baseline', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_32_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/blockchain/diophantine_equation_baseline.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(3.9594), 'avg_cpu_usage': np.float64(3.91), 'avg_used_memory': np.float64(3875054933.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_32_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [34 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_33_repetition_0', '__done': 'TODO', 'benchmark': 'diophantine_equation', 'version': 'baseline', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_33_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/blockchain/diophantine_equation_baseline.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(3.9527), 'avg_cpu_usage': np.float64(4.26), 'avg_used_memory': np.float64(3885641728.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_33_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [35 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_34_repetition_0', '__done': 'TODO', 'benchmark': 'diophantine_equation', 'version': 'g1', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_34_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/blockchain/g1/diophantine_equation_g1.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.0304), 'avg_cpu_usage': np.float64(3.86), 'avg_used_memory': np.float64(3890322090.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_34_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [36 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_35_repetition_0', '__done': 'TODO', 'benchmark': 'diophantine_equation', 'version': 'g1', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_35_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/blockchain/g1/diophantine_equation_g1.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(4.3084), 'avg_cpu_usage': np.float64(3.48), 'avg_used_memory': np.float64(3890694826.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_35_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [37 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_36_repetition_0', '__done': 'TODO', 'benchmark': 'diophantine_equation', 'version': 'g6', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_36_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/blockchain/g6/diophantine_equation_g6.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(3.8533), 'avg_cpu_usage': np.float64(2.36), 'avg_used_memory': np.float64(3895590912.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_36_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [38 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_37_repetition_0', '__done': 'TODO', 'benchmark': 'diophantine_equation', 'version': 'g6', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_37_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/blockchain/g6/diophantine_equation_g6.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.3102), 'avg_cpu_usage': np.float64(4.24), 'avg_used_memory': np.float64(3896418304.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_37_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [39 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_38_repetition_0', '__done': 'TODO', 'benchmark': 'diophantine_equation', 'version': 'g9', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_38_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/blockchain/g9/diophantine_equation_g9.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(3.7927), 'avg_cpu_usage': np.float64(4.73), 'avg_used_memory': np.float64(3898079914.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_38_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [40 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_39_repetition_0', '__done': 'TODO', 'benchmark': 'diophantine_equation', 'version': 'g9', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_39_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/blockchain/g9/diophantine_equation_g9.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(4.1149), 'avg_cpu_usage': np.float64(4.58), 'avg_used_memory': np.float64(3899737429.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_39_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [41 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_40_repetition_0', '__done': 'TODO', 'benchmark': 'diophantine_equation', 'version': 'opt', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_40_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/blockchain/opt/diophantine_equation_opt.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.1782), 'avg_cpu_usage': np.float64(2.59), 'avg_used_memory': np.float64(3901676202.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_40_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [42 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_41_repetition_0', '__done': 'TODO', 'benchmark': 'diophantine_equation', 'version': 'opt', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_41_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/blockchain/opt/diophantine_equation_opt.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.2373), 'avg_cpu_usage': np.float64(3.08), 'avg_used_memory': np.float64(3899027456.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_41_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [43 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_42_repetition_0', '__done': 'TODO', 'benchmark': 'fib', 'version': 'baseline', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_42_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/fib/fib_baseline.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(3.9075), 'avg_cpu_usage': np.float64(4.0), 'avg_used_memory': np.float64(3894261077.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_42_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [44 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_43_repetition_0', '__done': 'TODO', 'benchmark': 'fib', 'version': 'baseline', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_43_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/fib/fib_baseline.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(201), 'cpu_energy_j': np.float64(8.766), 'avg_cpu_usage': np.float64(2.61), 'avg_used_memory': np.float64(3896508416.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_43_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [45 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_44_repetition_0', '__done': 'TODO', 'benchmark': 'fib', 'version': 'opt', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_44_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/fib/fib_opt.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(3.9438), 'avg_cpu_usage': np.float64(3.23), 'avg_used_memory': np.float64(3906534058.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_44_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [46 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_45_repetition_0', '__done': 'TODO', 'benchmark': 'fib', 'version': 'opt', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_45_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/fib/fib_opt.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(4.1687), 'avg_cpu_usage': np.float64(3.43), 'avg_used_memory': np.float64(3914345130.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_45_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [47 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_46_repetition_0', '__done': 'TODO', 'benchmark': 'geometry', 'version': 'baseline', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_46_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/geometry/geometry_baseline.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(4.3636), 'avg_cpu_usage': np.float64(3.05), 'avg_used_memory': np.float64(3924226048.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_46_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [48 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_47_repetition_0', '__done': 'TODO', 'benchmark': 'geometry', 'version': 'baseline', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_47_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/geometry/geometry_baseline.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(301), 'cpu_energy_j': np.float64(18.3797), 'avg_cpu_usage': np.float64(3.7), 'avg_used_memory': np.float64(3927237427.2)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_47_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [49 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_48_repetition_0', '__done': 'TODO', 'benchmark': 'geometry', 'version': 'g1', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_48_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/geometry/g1/geometry_g1.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(3.8979), 'avg_cpu_usage': np.float64(4.55), 'avg_used_memory': np.float64(3912324437.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_48_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [50 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_49_repetition_0', '__done': 'TODO', 'benchmark': 'geometry', 'version': 'g1', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_49_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/geometry/g1/geometry_g1.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(301), 'cpu_energy_j': np.float64(18.09), 'avg_cpu_usage': np.float64(4.97), 'avg_used_memory': np.float64(3931015577.6)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_49_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [51 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_50_repetition_0', '__done': 'TODO', 'benchmark': 'geometry', 'version': 'g6', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_50_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/geometry/g6/geometry_g6.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.1093), 'avg_cpu_usage': np.float64(3.81), 'avg_used_memory': np.float64(3914551296.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_50_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [52 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_51_repetition_0', '__done': 'TODO', 'benchmark': 'geometry', 'version': 'g6', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_51_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/geometry/g6/geometry_g6.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(5.8022), 'avg_cpu_usage': np.float64(3.82), 'avg_used_memory': np.float64(3916484608.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_51_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [53 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_52_repetition_0', '__done': 'TODO', 'benchmark': 'geometry', 'version': 'g7', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_52_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/geometry/g7/geometry_g7.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(3.829), 'avg_cpu_usage': np.float64(5.41), 'avg_used_memory': np.float64(3917829461.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_52_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [54 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_53_repetition_0', '__done': 'TODO', 'benchmark': 'geometry', 'version': 'g7', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_53_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/geometry/g7/geometry_g7.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(401), 'cpu_energy_j': np.float64(20.6324), 'avg_cpu_usage': np.float64(3.03), 'avg_used_memory': np.float64(3935664810.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_53_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [55 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_54_repetition_0', '__done': 'TODO', 'benchmark': 'geometry', 'version': 'g9', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_54_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/geometry/g9/geometry_g9.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(4.605), 'avg_cpu_usage': np.float64(5.08), 'avg_used_memory': np.float64(3911262208.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_54_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [56 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_55_repetition_0', '__done': 'TODO', 'benchmark': 'geometry', 'version': 'g9', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_55_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/geometry/g9/geometry_g9.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(5.7029), 'avg_cpu_usage': np.float64(3.54), 'avg_used_memory': np.float64(3910755669.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_55_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [57 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_56_repetition_0', '__done': 'TODO', 'benchmark': 'geometry', 'version': 'opt', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_56_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/geometry/opt/geometry_opt.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(4.3874), 'avg_cpu_usage': np.float64(2.59), 'avg_used_memory': np.float64(3911457450.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_56_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [58 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_57_repetition_0', '__done': 'TODO', 'benchmark': 'geometry', 'version': 'opt', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_57_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/geometry/opt/geometry_opt.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(5.5435), 'avg_cpu_usage': np.float64(3.1), 'avg_used_memory': np.float64(3911146154.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_57_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [59 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_58_repetition_0', '__done': 'TODO', 'benchmark': 'inline', 'version': 'baseline', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_58_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/inline/inline_baseline.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.0085), 'avg_cpu_usage': np.float64(4.4), 'avg_used_memory': np.float64(3912067754.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_58_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [60 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_59_repetition_0', '__done': 'TODO', 'benchmark': 'inline', 'version': 'baseline', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_59_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/inline/inline_baseline.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(3.9195), 'avg_cpu_usage': np.float64(2.31), 'avg_used_memory': np.float64(3914618197.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_59_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [61 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_60_repetition_0', '__done': 'TODO', 'benchmark': 'inline', 'version': 'opt', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_60_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/inline/inline_opt.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(3.6515), 'avg_cpu_usage': np.float64(4.42), 'avg_used_memory': np.float64(3916845056.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_60_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [62 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_61_repetition_0', '__done': 'TODO', 'benchmark': 'inline', 'version': 'opt', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_61_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/inline/inline_opt.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.2066), 'avg_cpu_usage': np.float64(3.1), 'avg_used_memory': np.float64(3917123584.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_61_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [63 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_62_repetition_0', '__done': 'TODO', 'benchmark': 'jacobi_iteration_method', 'version': 'baseline', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_62_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/jaccobi_iteration_method/jacobi_iteration_method_baseline.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(201), 'cpu_energy_j': np.float64(12.2026), 'avg_cpu_usage': np.float64(8.48), 'avg_used_memory': np.float64(3922906112.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_62_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [64 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_63_repetition_0', '__done': 'TODO', 'benchmark': 'jacobi_iteration_method', 'version': 'baseline', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_63_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/jaccobi_iteration_method/jacobi_iteration_method_baseline.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(201), 'cpu_energy_j': np.float64(17.8776), 'avg_cpu_usage': np.float64(12.31), 'avg_used_memory': np.float64(3930423296.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_63_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [65 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_64_repetition_0', '__done': 'TODO', 'benchmark': 'jacobi_iteration_method', 'version': 'g1', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_64_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/jaccobi_iteration_method/g1/jacobi_iteration_method_g1.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(9.1815), 'avg_cpu_usage': np.float64(2.59), 'avg_used_memory': np.float64(3914653696.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_64_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [66 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_65_repetition_0', '__done': 'TODO', 'benchmark': 'jacobi_iteration_method', 'version': 'g1', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_65_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/jaccobi_iteration_method/g1/jacobi_iteration_method_g1.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(201), 'cpu_energy_j': np.float64(18.2504), 'avg_cpu_usage': np.float64(11.98), 'avg_used_memory': np.float64(3933748224.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_65_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [67 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_66_repetition_0', '__done': 'TODO', 'benchmark': 'jacobi_iteration_method', 'version': 'g3', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_66_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/jaccobi_iteration_method/g3/jacobi_iteration_method_g3.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(102), 'cpu_energy_j': np.float64(10.1593), 'avg_cpu_usage': np.float64(3.88), 'avg_used_memory': np.float64(3917501781.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_66_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [68 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_67_repetition_0', '__done': 'TODO', 'benchmark': 'jacobi_iteration_method', 'version': 'g3', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_67_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/jaccobi_iteration_method/g3/jacobi_iteration_method_g3.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(200), 'cpu_energy_j': np.float64(18.8671), 'avg_cpu_usage': np.float64(11.9), 'avg_used_memory': np.float64(3930299392.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_67_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [69 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_68_repetition_0', '__done': 'TODO', 'benchmark': 'jacobi_iteration_method', 'version': 'g5', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_68_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/jaccobi_iteration_method/g5/jacobi_iteration_method_g5.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(9.5498), 'avg_cpu_usage': np.float64(4.24), 'avg_used_memory': np.float64(3914504874.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_68_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [70 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_69_repetition_0', '__done': 'TODO', 'benchmark': 'jacobi_iteration_method', 'version': 'g5', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_69_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/jaccobi_iteration_method/g5/jacobi_iteration_method_g5.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(201), 'cpu_energy_j': np.float64(17.0359), 'avg_cpu_usage': np.float64(12.59), 'avg_used_memory': np.float64(3928570880.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_69_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [71 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_70_repetition_0', '__done': 'TODO', 'benchmark': 'jacobi_iteration_method', 'version': 'g6', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_70_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/jaccobi_iteration_method/g6/jacobi_iteration_method_g6.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(9.2932), 'avg_cpu_usage': np.float64(3.05), 'avg_used_memory': np.float64(3918027434.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_70_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [72 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_71_repetition_0', '__done': 'TODO', 'benchmark': 'jacobi_iteration_method', 'version': 'g6', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_71_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/jaccobi_iteration_method/g6/jacobi_iteration_method_g6.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(200), 'cpu_energy_j': np.float64(17.4342), 'avg_cpu_usage': np.float64(12.74), 'avg_used_memory': np.float64(3931693056.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_71_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [73 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_72_repetition_0', '__done': 'TODO', 'benchmark': 'jacobi_iteration_method', 'version': 'opt', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_72_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/jaccobi_iteration_method/opt/jacobi_iteration_method_opt.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(201), 'cpu_energy_j': np.float64(12.2314), 'avg_cpu_usage': np.float64(7.36), 'avg_used_memory': np.float64(3924666368.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_72_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [74 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_73_repetition_0', '__done': 'TODO', 'benchmark': 'jacobi_iteration_method', 'version': 'opt', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_73_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/jaccobi_iteration_method/opt/jacobi_iteration_method_opt.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(201), 'cpu_energy_j': np.float64(16.7106), 'avg_cpu_usage': np.float64(11.81), 'avg_used_memory': np.float64(3939418112.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_73_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [75 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_74_repetition_0', '__done': 'TODO', 'benchmark': 'logic', 'version': 'baseline', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_74_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/logic/logic_baseline.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(3.7571), 'avg_cpu_usage': np.float64(4.58), 'avg_used_memory': np.float64(3931877376.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_74_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [76 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_75_repetition_0', '__done': 'TODO', 'benchmark': 'logic', 'version': 'baseline', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_75_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/logic/logic_baseline.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(1202), 'cpu_energy_j': np.float64(73.6055), 'avg_cpu_usage': np.float64(1.02), 'avg_used_memory': np.float64(3937430966.86)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_75_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [77 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_76_repetition_0', '__done': 'TODO', 'benchmark': 'logic', 'version': 'opt', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_76_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/logic/logic_opt.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(3.9319), 'avg_cpu_usage': np.float64(1.97), 'avg_used_memory': np.float64(3934672213.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_76_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [78 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_77_repetition_0', '__done': 'TODO', 'benchmark': 'logic', 'version': 'opt', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_77_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/logic/logic_opt.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(1201), 'cpu_energy_j': np.float64(74.9324), 'avg_cpu_usage': np.float64(7.08), 'avg_used_memory': np.float64(3939974582.86)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_77_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [79 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_78_repetition_0', '__done': 'TODO', 'benchmark': 'lu_decomposition', 'version': 'baseline', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_78_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/lu_decomposition/lu_decomposition_baseline.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(201), 'cpu_energy_j': np.float64(15.8486), 'avg_cpu_usage': np.float64(10.97), 'avg_used_memory': np.float64(3941151744.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_78_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [80 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_79_repetition_0', '__done': 'TODO', 'benchmark': 'lu_decomposition', 'version': 'baseline', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_79_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/lu_decomposition/lu_decomposition_baseline.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(9305), 'cpu_energy_j': np.float64(602.5107), 'avg_cpu_usage': np.float64(9.02), 'avg_used_memory': np.float64(4017450361.26)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_79_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [81 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_80_repetition_0', '__done': 'TODO', 'benchmark': 'lu_decomposition', 'version': 'g5', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_80_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/lu_decomposition/g5/lu_decomposition_g5.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(201), 'cpu_energy_j': np.float64(15.223), 'avg_cpu_usage': np.float64(12.1), 'avg_used_memory': np.float64(3939530752.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_80_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [82 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_81_repetition_0', '__done': 'TODO', 'benchmark': 'lu_decomposition', 'version': 'g5', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_81_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/lu_decomposition/g5/lu_decomposition_g5.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(9506), 'cpu_energy_j': np.float64(608.7542), 'avg_cpu_usage': np.float64(0.95), 'avg_used_memory': np.float64(3981282483.46)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_81_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [83 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_82_repetition_0', '__done': 'TODO', 'benchmark': 'lu_decomposition', 'version': 'g6', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_82_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/lu_decomposition/g6/lu_decomposition_g6.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(10.4397), 'avg_cpu_usage': np.float64(2.76), 'avg_used_memory': np.float64(3930035541.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_82_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [84 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_83_repetition_0', '__done': 'TODO', 'benchmark': 'lu_decomposition', 'version': 'g6', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_83_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/lu_decomposition/g6/lu_decomposition_g6.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(3903), 'cpu_energy_j': np.float64(257.9041), 'avg_cpu_usage': np.float64(9.32), 'avg_used_memory': np.float64(4007873660.88)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_83_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [85 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_84_repetition_0', '__done': 'TODO', 'benchmark': 'lu_decomposition', 'version': 'g7', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_84_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/lu_decomposition/g7/lu_decomposition_g7.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(201), 'cpu_energy_j': np.float64(12.9234), 'avg_cpu_usage': np.float64(8.6), 'avg_used_memory': np.float64(3939712000.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_84_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [86 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_85_repetition_0', '__done': 'TODO', 'benchmark': 'lu_decomposition', 'version': 'g7', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_85_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/lu_decomposition/g7/lu_decomposition_g7.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(3802), 'cpu_energy_j': np.float64(562.3991), 'avg_cpu_usage': np.float64(78.67), 'avg_used_memory': np.float64(4024896409.6)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_85_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [87 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_86_repetition_0', '__done': 'TODO', 'benchmark': 'lu_decomposition', 'version': 'g9', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_86_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/lu_decomposition/g9/lu_decomposition_g9.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(10.1023), 'avg_cpu_usage': np.float64(2.33), 'avg_used_memory': np.float64(3941829290.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_86_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [88 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_87_repetition_0', '__done': 'TODO', 'benchmark': 'lu_decomposition', 'version': 'g9', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_87_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/lu_decomposition/g9/lu_decomposition_g9.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(9.5617), 'avg_cpu_usage': np.float64(3.48), 'avg_used_memory': np.float64(3935970645.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_87_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [89 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_88_repetition_0', '__done': 'TODO', 'benchmark': 'lu_decomposition', 'version': 'opt', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_88_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/lu_decomposition/opt/lu_decomposition_opt.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(9.3796), 'avg_cpu_usage': np.float64(3.71), 'avg_used_memory': np.float64(3937753770.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_88_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [90 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_89_repetition_0', '__done': 'TODO', 'benchmark': 'lu_decomposition', 'version': 'opt', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_89_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/linear_algebra/lu_decomposition/opt/lu_decomposition_opt.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(300), 'cpu_energy_j': np.float64(35.1922), 'avg_cpu_usage': np.float64(32.0), 'avg_used_memory': np.float64(3961104793.6)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_89_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [91 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_90_repetition_0', '__done': 'TODO', 'benchmark': 'md5', 'version': 'baseline', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_90_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/hashes/md5/md5_baseline.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(4.3326), 'avg_cpu_usage': np.float64(4.03), 'avg_used_memory': np.float64(3940672853.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_90_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [92 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_91_repetition_0', '__done': 'TODO', 'benchmark': 'md5', 'version': 'baseline', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_91_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/hashes/md5/md5_baseline.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(4503), 'cpu_energy_j': np.float64(273.7622), 'avg_cpu_usage': np.float64(0.27), 'avg_used_memory': np.float64(3947940929.36)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_91_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [93 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_92_repetition_0', '__done': 'TODO', 'benchmark': 'md5', 'version': 'g1', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_92_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/hashes/md5/g1/md5_g1.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.0393), 'avg_cpu_usage': np.float64(3.3), 'avg_used_memory': np.float64(3936159061.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_92_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [94 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_93_repetition_0', '__done': 'TODO', 'benchmark': 'md5', 'version': 'g1', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_93_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/hashes/md5/g1/md5_g1.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(4703), 'cpu_energy_j': np.float64(280.0093), 'avg_cpu_usage': np.float64(0.56), 'avg_used_memory': np.float64(3937496419.27)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_93_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [95 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_94_repetition_0', '__done': 'TODO', 'benchmark': 'md5', 'version': 'g3', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_94_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/hashes/md5/g3/md5_g3.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(3.9174), 'avg_cpu_usage': np.float64(2.71), 'avg_used_memory': np.float64(3926944426.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_94_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [96 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_95_repetition_0', '__done': 'TODO', 'benchmark': 'md5', 'version': 'g3', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_95_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/hashes/md5/g3/md5_g3.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(200), 'cpu_energy_j': np.float64(11.7802), 'avg_cpu_usage': np.float64(5.0), 'avg_used_memory': np.float64(3932903424.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_95_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [97 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_96_repetition_0', '__done': 'TODO', 'benchmark': 'md5', 'version': 'g6', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_96_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/hashes/md5/g6/md5_g6.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(5.1419), 'avg_cpu_usage': np.float64(6.22), 'avg_used_memory': np.float64(3926293162.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_96_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [98 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_97_repetition_0', '__done': 'TODO', 'benchmark': 'md5', 'version': 'g6', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_97_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/hashes/md5/g6/md5_g6.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(4503), 'cpu_energy_j': np.float64(280.4411), 'avg_cpu_usage': np.float64(0.53), 'avg_used_memory': np.float64(3942258121.53)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_97_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [99 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_98_repetition_0', '__done': 'TODO', 'benchmark': 'md5', 'version': 'g7', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_98_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/hashes/md5/g7/md5_g7.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(3.91), 'avg_cpu_usage': np.float64(3.81), 'avg_used_memory': np.float64(3932886357.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_98_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [100 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_99_repetition_0', '__done': 'TODO', 'benchmark': 'md5', 'version': 'g7', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_99_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/hashes/md5/g7/md5_g7.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(201), 'cpu_energy_j': np.float64(9.2363), 'avg_cpu_usage': np.float64(4.45), 'avg_used_memory': np.float64(3936500736.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_99_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [101 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_100_repetition_0', '__done': 'TODO', 'benchmark': 'md5', 'version': 'g9', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_100_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/hashes/md5/g9/md5_g9.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(4.1115), 'avg_cpu_usage': np.float64(3.88), 'avg_used_memory': np.float64(3934236672.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_100_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [102 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_101_repetition_0', '__done': 'TODO', 'benchmark': 'md5', 'version': 'g9', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_101_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/hashes/md5/g9/md5_g9.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(4503), 'cpu_energy_j': np.float64(277.108), 'avg_cpu_usage': np.float64(0.41), 'avg_used_memory': np.float64(3943721613.62)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_101_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [103 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_102_repetition_0', '__done': 'TODO', 'benchmark': 'md5', 'version': 'opt', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_102_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/hashes/md5/opt/md5_opt.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(3.8068), 'avg_cpu_usage': np.float64(1.55), 'avg_used_memory': np.float64(3937746944.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_102_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [104 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_103_repetition_0', '__done': 'TODO', 'benchmark': 'md5', 'version': 'opt', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_103_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/hashes/md5/opt/md5_opt.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(6.6006), 'avg_cpu_usage': np.float64(5.98), 'avg_used_memory': np.float64(3930838357.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_103_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [105 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_104_repetition_0', '__done': 'TODO', 'benchmark': 'merge_sort', 'version': 'baseline', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_104_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/sorts/merge_sort/merge_sort_baseline.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(4.7401), 'avg_cpu_usage': np.float64(5.32), 'avg_used_memory': np.float64(3929011541.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_104_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [106 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_105_repetition_0', '__done': 'TODO', 'benchmark': 'merge_sort', 'version': 'baseline', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_105_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/sorts/merge_sort/merge_sort_baseline.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(1201), 'cpu_energy_j': np.float64(72.6847), 'avg_cpu_usage': np.float64(0.96), 'avg_used_memory': np.float64(3946730349.71)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_105_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [107 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_106_repetition_0', '__done': 'TODO', 'benchmark': 'merge_sort', 'version': 'g1', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_106_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/sorts/merge_sort/g1/merge_sort_g1.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.5637), 'avg_cpu_usage': np.float64(4.24), 'avg_used_memory': np.float64(3930329088.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_106_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [108 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_107_repetition_0', '__done': 'TODO', 'benchmark': 'merge_sort', 'version': 'g1', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_107_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/sorts/merge_sort/g1/merge_sort_g1.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(1202), 'cpu_energy_j': np.float64(69.5727), 'avg_cpu_usage': np.float64(7.02), 'avg_used_memory': np.float64(3950483163.43)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_107_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [109 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_108_repetition_0', '__done': 'TODO', 'benchmark': 'merge_sort', 'version': 'g2', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_108_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/sorts/merge_sort/g2/merge_sort_g2.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.7806), 'avg_cpu_usage': np.float64(3.03), 'avg_used_memory': np.float64(3934442837.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_108_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [110 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_109_repetition_0', '__done': 'TODO', 'benchmark': 'merge_sort', 'version': 'g2', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_109_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/sorts/merge_sort/g2/merge_sort_g2.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(1201), 'cpu_energy_j': np.float64(72.4229), 'avg_cpu_usage': np.float64(7.27), 'avg_used_memory': np.float64(3878419602.29)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_109_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [111 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_110_repetition_0', '__done': 'TODO', 'benchmark': 'merge_sort', 'version': 'g3', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_110_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/sorts/merge_sort/g3/merge_sort_g3.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(4.5599), 'avg_cpu_usage': np.float64(2.67), 'avg_used_memory': np.float64(3844433237.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_110_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [112 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_111_repetition_0', '__done': 'TODO', 'benchmark': 'merge_sort', 'version': 'g3', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_111_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/sorts/merge_sort/g3/merge_sort_g3.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(301), 'cpu_energy_j': np.float64(17.231), 'avg_cpu_usage': np.float64(2.62), 'avg_used_memory': np.float64(3845336268.8)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_111_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [113 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_112_repetition_0', '__done': 'TODO', 'benchmark': 'merge_sort', 'version': 'opt', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_112_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/sorts/merge_sort/opt/merge_sort_opt.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(4.4351), 'avg_cpu_usage': np.float64(4.73), 'avg_used_memory': np.float64(3839299584.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_112_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [114 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_113_repetition_0', '__done': 'TODO', 'benchmark': 'merge_sort', 'version': 'opt', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_113_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Python_Algorithm/sorts/merge_sort/opt/merge_sort_opt.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(2803), 'cpu_energy_j': np.float64(174.457), 'avg_cpu_usage': np.float64(7.77), 'avg_used_memory': np.float64(3939469858.13)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_113_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [115 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_114_repetition_0', '__done': 'TODO', 'benchmark': 'sort', 'version': 'baseline', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_114_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/sort/sort_baseline.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(3.9942), 'avg_cpu_usage': np.float64(4.19), 'avg_used_memory': np.float64(3844987562.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_114_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [116 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_115_repetition_0', '__done': 'TODO', 'benchmark': 'sort', 'version': 'baseline', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_115_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/sort/sort_baseline.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(3.8763), 'avg_cpu_usage': np.float64(3.67), 'avg_used_memory': np.float64(3845817685.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_115_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [117 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_116_repetition_0', '__done': 'TODO', 'benchmark': 'sort', 'version': 'opt', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_116_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/sort/sort_opt.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(3.8734), 'avg_cpu_usage': np.float64(3.07), 'avg_used_memory': np.float64(3847240362.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_116_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [118 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_117_repetition_0', '__done': 'TODO', 'benchmark': 'sort', 'version': 'opt', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_117_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/sort/sort_opt.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(3.6429), 'avg_cpu_usage': np.float64(3.0), 'avg_used_memory': np.float64(3842188629.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_117_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [119 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_118_repetition_0', '__done': 'TODO', 'benchmark': 'string_concat', 'version': 'baseline', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_118_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/string_concat/string_concat_baseline.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(3.6153), 'avg_cpu_usage': np.float64(3.48), 'avg_used_memory': np.float64(3844029098.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_118_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [120 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_119_repetition_0', '__done': 'TODO', 'benchmark': 'string_concat', 'version': 'baseline', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_119_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/string_concat/string_concat_baseline.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(5.9122), 'avg_cpu_usage': np.float64(3.36), 'avg_used_memory': np.float64(3843164842.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_119_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [121 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_120_repetition_0', '__done': 'TODO', 'benchmark': 'string_concat', 'version': 'opt', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_120_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/string_concat/string_concat_opt.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.0207), 'avg_cpu_usage': np.float64(4.21), 'avg_used_memory': np.float64(3839253162.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_120_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [122 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_121_repetition_0', '__done': 'TODO', 'benchmark': 'string_concat', 'version': 'opt', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_121_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/string_concat/string_concat_opt.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(3.8516), 'avg_cpu_usage': np.float64(3.34), 'avg_used_memory': np.float64(3840514730.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_121_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [123 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_122_repetition_0', '__done': 'TODO', 'benchmark': 'sum_squares', 'version': 'baseline', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_122_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/sum_squares/sum_squares_baseline.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(3.5897), 'avg_cpu_usage': np.float64(3.88), 'avg_used_memory': np.float64(3842583210.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_122_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [124 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_123_repetition_0', '__done': 'TODO', 'benchmark': 'sum_squares', 'version': 'baseline', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_123_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/sum_squares/sum_squares_baseline.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.1903), 'avg_cpu_usage': np.float64(4.46), 'avg_used_memory': np.float64(3843007829.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_123_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [125 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_124_repetition_0', '__done': 'TODO', 'benchmark': 'sum_squares', 'version': 'opt', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_124_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/sum_squares/sum_squares_opt.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(4.0301), 'avg_cpu_usage': np.float64(2.76), 'avg_used_memory': np.float64(3846015658.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_124_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [126 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_125_repetition_0', '__done': 'TODO', 'benchmark': 'sum_squares', 'version': 'opt', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_125_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/sum_squares/sum_squares_opt.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(4.1548), 'avg_cpu_usage': np.float64(2.92), 'avg_used_memory': np.float64(3848062293.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_125_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [127 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_126_repetition_0', '__done': 'TODO', 'benchmark': 'temp_storage', 'version': 'baseline', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_126_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/temp_storage/temp_storage_baseline.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(3.6337), 'avg_cpu_usage': np.float64(3.79), 'avg_used_memory': np.float64(3848327168.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_126_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [128 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_127_repetition_0', '__done': 'TODO', 'benchmark': 'temp_storage', 'version': 'baseline', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_127_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/temp_storage/temp_storage_baseline.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(3.8227), 'avg_cpu_usage': np.float64(4.62), 'avg_used_memory': np.float64(3842837162.67)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_127_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [129 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_128_repetition_0', '__done': 'TODO', 'benchmark': 'temp_storage', 'version': 'opt', 'size': 'small', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_128_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/temp_storage/temp_storage_opt.py --size small
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(100), 'cpu_energy_j': np.float64(4.028), 'avg_cpu_usage': np.float64(3.81), 'avg_used_memory': np.float64(3846792533.33)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_128_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [93mCalling before_run config hook[0m
+
+-----------------NEW RUN [130 / 130]-----------------
+
+[EXPERIMENT_RUNNER]:  [93mCalling start_run config hook[0m
+Starting run: {'__run_id': 'run_129_repetition_0', '__done': 'TODO', 'benchmark': 'temp_storage', 'version': 'opt', 'size': 'large', 'exec_time_sec': ' ', 'cpu_energy_j': ' ', 'avg_cpu_usage': ' ', 'avg_used_memory': ' '}
+[EXPERIMENT_RUNNER]:  [93m... Starting measurement ...[0m
+Running: sudo energibridge --interval 100 --output /home/homuracat/green-lab-project/benchmarks/experiments/B/run_129_repetition_0/energibridge.csv --summary python3 /home/homuracat/green-lab-project/benchmarks/Trivial_Case/temp_storage/temp_storage_opt.py --size large
+[EXPERIMENT_RUNNER]:  [93mCalling interaction config hook[0m
+[EXPERIMENT_RUNNER]:  [92m... Run completed ...[0m
+[EXPERIMENT_RUNNER]:  [93m... Stopping measurement ...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling stop_run config hook[0m
+[EXPERIMENT_RUNNER]:  [93mCalling populate_run_data config hook[0m
+{'exec_time_sec': np.int64(101), 'cpu_energy_j': np.float64(3.7775), 'avg_cpu_usage': np.float64(2.59), 'avg_used_memory': np.float64(3839516672.0)}
+[EXPERIMENT_RUNNER]:  [93mCSVManager: Updated row run_129_repetition_0[0m
+[EXPERIMENT_RUNNER]:  [1mRun fully ended, waiting for: 2000ms == 2.0s[0m
+[EXPERIMENT_RUNNER]:  [92mExperiment completed...[0m
+[EXPERIMENT_RUNNER]:  [93mCalling after_experiment config hook[0m

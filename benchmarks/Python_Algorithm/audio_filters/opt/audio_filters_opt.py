@@ -8,7 +8,7 @@ from scipy.io.wavfile import write as write_wav
 #import ipdb;ipdb.set_trace()
 ROOT_DIR = Path(__file__).resolve().parent.parent
 sys.path.append(str(ROOT_DIR))
-from audio_filters.butterworth_filter import make_lowpass, make_lowshelf, make_highshelf
+from butterworth_filter import make_lowpass, make_lowshelf, make_highshelf
 
 
 SAMPLERATE = 48000

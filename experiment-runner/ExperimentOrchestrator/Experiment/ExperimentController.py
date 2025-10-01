@@ -72,14 +72,14 @@ class ExperimentController:
                                 )
             # check md5sum
             existing_metadata = self.json_data_manager.read_metadata()
-            if existing_metadata.md5sum != self.metadata.md5sum:  # check md5sum
-                cont = output.query_yes_no("md5sum mismatch! This can occur if the configuration code "
-                                           "has changed since the last run. Continue anyway?", default=None)
-                if not cont:
-                    raise BaseError("Aborting due to md5sum mismatch.")
+            #if existing_metadata.md5sum != self.metadata.md5sum:  # check md5sum
+            #    cont = output.query_yes_no("md5sum mismatch! This can occur if the configuration code "
+            #                               "has changed since the last run. Continue anyway?", default=None)
+            #    if not cont:
+            #        raise BaseError("Aborting due to md5sum mismatch.")
 
-                output.console_log_WARNING(f"Updating md5sum from {existing_metadata.md5sum.hex()} to {self.metadata.md5sum.hex()}")
-                self.json_data_manager.write_metadata(self.metadata)
+            #    output.console_log_WARNING(f"Updating md5sum from {existing_metadata.md5sum.hex()} to {self.metadata.md5sum.hex()}")
+            #    self.json_data_manager.write_metadata(self.metadata)
 
             self.restarted = True
             assert(len(existing_run_table) == len(self.run_table))

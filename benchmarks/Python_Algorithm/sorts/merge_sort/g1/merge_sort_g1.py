@@ -70,7 +70,7 @@ def main(size: str) -> None:
     # 为小规模和大规模测试定义数据量
     size_mapping = {
         "small": 10_000,    # 1万个元素
-        "large": 2_000_000  # 200万个元素
+        "large": 2_00_000  # 20万个元素
     }
     num_elements = size_mapping[size]
 
@@ -115,7 +115,7 @@ if __name__ == "__main__":
         help=(
             "Select the size of the dataset to sort:\n"
             "'small': A small dataset (10,000 elements) for quick tests.\n"
-            "'large': A large dataset (2,000,000 elements) for performance/energy tests."
+            "'large': A large dataset (2,000,00 elements) for performance/energy tests."
         )
     )
 

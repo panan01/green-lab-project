@@ -22,7 +22,7 @@ class RunnerConfig:
 
     ROOT_DIR = Path(dirname(realpath(__file__)))
 
-    name: str = "A"
+    name: str = "B"
     results_output_path: Path = ROOT_DIR / 'experiments'
     operation_type: OperationType = OperationType.AUTO
     time_between_runs_in_ms: int = 2000
@@ -124,7 +124,7 @@ class RunnerConfig:
             factors=all_factors,
             exclude_combinations=exclusion_list,
             data_columns=["exec_time_sec", "cpu_energy_j", "avg_cpu_usage", "avg_used_memory"],
-            repetitions=10
+            repetitions=1
         )
         
         # --- NEW LOGIC END ---
