@@ -387,13 +387,13 @@ def main(size_preset: str) -> None:
     data_length = 0
     if size_preset == "small":
         # 10 KB: A small but non-trivial amount of data for testing.
-        data_length = 10 * 1024
-        print(f"Selected 'small' size: {data_length} bytes (10 KB)")
+        data_length = 8 * 1024
+        print(f"Selected 'small' size: {data_length} bytes (8 KB)")
     elif size_preset == "large":
         # 10 MB: A larger amount of data to create a measurable difference
         # in performance and energy consumption.
-        data_length = 10 * 1024 * 1024
-        print(f"Selected 'large' size: {data_length} bytes (10 MB)")
+        data_length = 128 * 1024
+        print(f"Selected 'large' size: {data_length} bytes (128 KB)")
 
     print("Generating test data...")
     # Using a simple repeating character is sufficient for performance testing.
