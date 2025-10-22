@@ -3,5 +3,6 @@ name = "greenlab"
 version = "0.1.0"
 requires-python = ">=3.13"
 dependencies = [
+    "pandas>=2.3.3",
     "pyperformance>=1.11.0",
 ]
